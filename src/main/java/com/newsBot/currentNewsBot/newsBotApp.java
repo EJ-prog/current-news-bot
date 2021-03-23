@@ -13,7 +13,7 @@ import net.dv8tion.jda.api.JDABuilder;
 public class newsBotApp {
    public static void main(String[] theArgs) {
       try (InputStream input = newsBotApp.class.getClassLoader()
-                               .getResourceAsStream("config.properties")) {
+                              .getResourceAsStream("config.properties")) {
          
          Properties prop = new Properties();
 
@@ -22,8 +22,15 @@ public class newsBotApp {
 
             String BOT_TOKEN = prop.getProperty("db.bot_token");
             try {
-               JDA api = JDABuilder.createDefault(BOT_TOKEN).build();
-            } catch (LoginException e) {
+               JDA api = JDABuilder.createDefault(BOT_TOKEN)
+                        .addEventListeners(new eventListener())
+                        .build();
+               api.awaitReady();
+            } 
+            catch (LoginException e) {
+               e.printStackTrace();
+            } 
+            catch (InterruptedException e) {
                e.printStackTrace();
             }
          } else {

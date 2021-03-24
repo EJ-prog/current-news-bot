@@ -26,6 +26,7 @@ public class newsBotApp {
                         .addEventListeners(new eventListener())
                         .build();
                api.awaitReady();
+               System.out.println("I build JDA Builder!");
             } 
             catch (LoginException e) {
                e.printStackTrace();

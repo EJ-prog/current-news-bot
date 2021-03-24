@@ -7,7 +7,7 @@ import net.dv8tion.jda.api.hooks.ListenerAdapter;
 public class eventListener extends ListenerAdapter {
 
    @Override
-   public void onMessageReactionAdd(MessageReceivedEvent theEvent) {
+   public void onMessageReceived(MessageReceivedEvent theEvent) {
       if (!theEvent.getAuthor().isBot()) {
          System.out.println("I'm not bot!");
          Message message = theEvent.getMessage();

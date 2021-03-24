@@ -1,4 +1,4 @@
-package test.java.com.newsBot.currentNewsBot;
+package com.newsBot.currentNewsBot;
 
 public class newsBotAppTest {
    

@@ -21,12 +21,15 @@ public class eventListener extends ListenerAdapter {
             channel.sendMessage("Pong!").queue();
          } else if (content.equals("!news")) {
             // Gives you news on demand
+            System.out.println("Breaking news! Uni Stuffs!");
             channel.sendMessage("Tis' the news!\n (Insert Links Here)");
          } else if (content.equals("!opinion")) {
             // Opinions section of news
+            System.out.println("This ain't up for debate. My opinion >:|");
             channel.sendMessage("It's an opinion!\n (Insert Links Here)");
          } else if (content.equals("!help") || content.equals("!halp")) {
             // Gives help
+            System.out.println("MEDIC! HAAALLLPPP!");
             channel.sendMessage("Never Fear! Uni News Bot is Here! \\o/\n"+
                "!ping - Gives pong! \n" +
                "!news - Shows Current articles from Uni!\n" +

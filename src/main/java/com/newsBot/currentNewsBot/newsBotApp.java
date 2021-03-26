@@ -1,6 +1,5 @@
 package com.newsBot.currentNewsBot;
 
-
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.Properties;
@@ -26,7 +25,7 @@ public class newsBotApp {
                         .addEventListeners(new eventListener())
                         .build();
                api.awaitReady();
-               System.out.println("I build JDA Builder!");
+               System.out.println("I build JDA Builder!");               
             } 
             catch (LoginException e) {
                e.printStackTrace();
